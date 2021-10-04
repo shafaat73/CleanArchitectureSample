@@ -17,8 +17,8 @@ class GetPostUseCase @Inject constructor(
     operator fun invoke(): Flow<Resource<List<Post>>> = flow {
         try {
             emit(Resource.Loading<List<Post>>())
-            val coins = repository.getPosts().map { it.toPost() }
-            emit(Resource.Success<List<Post>>(coins))
+            val posts = repository.getPosts().map { it.toPost() }
+            emit(Resource.Success<List<Post>>(posts))
         } catch(e: HttpException) {
             emit(Resource.Error<List<Post>>(e.localizedMessage ?: "An unexpected error occured"))
         } catch(e: IOException) {
