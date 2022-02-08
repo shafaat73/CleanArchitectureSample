@@ -2,6 +2,7 @@ package com.phaedra.cleanarchitecturesample.presentation.posts
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -9,6 +10,7 @@ import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.messaging.FirebaseMessaging
 import com.phaedra.cleanarchitecturesample.R
 import com.phaedra.cleanarchitecturesample.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -30,6 +32,14 @@ class MainActivity : AppCompatActivity() {
         binding.viewModel = viewModel
         setupRecyclerView()
         subscribeObservers()
+        FirebaseMessaging.getInstance().subscribeToTopic("all")
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Log.d("notification_data", "successs")
+                }else{
+                    // Log.e("TAG", "onCreate: subscribeToTopic failed", )
+                }
+            }
 
     }
 
@@ -39,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         adapter.listener = { view, it, id ->
 
         }
+
     }
 
     private fun subscribeObservers() {

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "671997275716",
+    "project_id": "cleanarchitecture-c8911",
+    "storage_bucket": "cleanarchitecture-c8911.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671997275716:android:fe72676a6c4a6f1e0c1611",
+        "android_client_info": {
+          "package_name": "com.phaedra.cleanarchitecturesample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "671997275716-dks6q976bbniv9o81csccneifu2mgt22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3W3cbXh4vfB3ueiY4dGviyFbUxBl18Ws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "671997275716-dks6q976bbniv9o81csccneifu2mgt22.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

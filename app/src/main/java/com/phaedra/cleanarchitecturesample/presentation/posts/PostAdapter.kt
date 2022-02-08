@@ -1,5 +1,6 @@
 package com.phaedra.cleanarchitecturesample.presentation.posts
 
+import android.content.Context
 import com.phaedra.cleanarchitecturesample.R
 import com.phaedra.cleanarchitecturesample.databinding.ItemPostsBinding
 import com.phaedra.cleanarchitecturesample.domain.model.Post
@@ -12,9 +13,11 @@ class PostAdapter @Inject constructor()
 
     override fun onBindViewHolder(holder: Companion.BaseViewHolder<ItemPostsBinding>, position: Int) {
         holder.binding.model = items[position]
+
         holder.binding.executePendingBindings()
         val model=items[position]
         holder.itemView.setOnClickListener {
+
             listener?.invoke(holder.binding.root, items[position],position )
         }
 

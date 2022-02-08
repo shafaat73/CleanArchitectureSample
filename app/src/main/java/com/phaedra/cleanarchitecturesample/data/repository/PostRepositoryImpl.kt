@@ -8,8 +8,6 @@ import javax.inject.Inject
 class PostRepositoryImpl @Inject constructor(
     private val api:ApiService
 ):PostRepository {
-
-
     override suspend fun getPosts(): List<PostDto> {
         return api.getPosts()
     }
