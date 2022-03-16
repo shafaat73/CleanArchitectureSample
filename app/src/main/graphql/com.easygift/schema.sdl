@@ -1,0 +1,42 @@
+type Post {
+  _id: ID
+  title: String
+  subtitle: String
+  body: String
+  banner: String
+  comments: [Comment]
+  user: User
+}
+
+type Query {
+  posts(limit: Int, skip: Int): [Post!]!
+  post(id: ID): Post
+  login(email: String!, password: String!): Login
+  getComments(limit: Int, skip: Int, postId: ID!): [Comment!]!
+}
+
+type Mutation {
+  createPost(title: String!, subtitle: String, body: String!, banner: String): Post!
+  signup(firstName: String!, lastName: String!, email: String!, password: String!): Login
+  forgetPassword(email: String): Login
+  postCommnet(body: String!, post: String!): Comment
+}
+
+type User {
+  _id: ID
+  firstName: String
+  lastName: String
+  email: String
+}
+
+type Login {
+  user: User
+  token: String
+}
+
+type Comment {
+  _id: ID!
+  body: String!
+  post: Post!
+  user: User!
+}

@@ -4,6 +4,7 @@ plugins {
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
     id 'com.google.gms.google-services'
+    id("com.apollographql.apollo3").version("3.1.0")
 }
 
 android {
@@ -108,4 +109,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'com.google.firebase:firebase-messaging-ktx'
     implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    //Apollo
+    implementation("com.apollographql.apollo3:apollo-runtime:3.1.0")
+
+}
+apollo {
+    packageName.set("com.phaedra.cleanarchitecturesample")
 }

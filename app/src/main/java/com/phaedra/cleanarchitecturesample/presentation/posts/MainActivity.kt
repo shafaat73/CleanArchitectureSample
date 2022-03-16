@@ -67,6 +67,10 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+        viewModel.getResponse.observe(this) {
+            Toast.makeText(this, "${it[0].title}", Toast.LENGTH_SHORT).show()
+        }
+
     }
 
 }

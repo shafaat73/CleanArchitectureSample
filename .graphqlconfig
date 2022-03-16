@@ -1,0 +1,16 @@
+{
+  "name": "Untitled GraphQL Schema",
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Default GraphQL Endpoint": {
+        "url": "https://social.purzey.com/graphql",
+        "headers": {
+          "authorization":
+          "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoYWZhYXRAZ21haWwuY29tIiwiX2lkIjoiNjIwMjVlODM0OTljMzY2ZjJhZjFlMzg3IiwiaWF0IjoxNjQ0MzIyNDM1fQ.rsb5mOWqfr6glOntkQInWLBsEfVdQwUxNRqPAQ47h8M"
+        },
+        "introspect": false
+      }
+    }
+  }
+}
